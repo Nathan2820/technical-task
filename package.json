@@ -1,0 +1,19 @@
+{
+  "name": "technical-task",
+  "version": "1.0.0",
+  "description": "Gforces technical task exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nathan2820/technical-task.git"
+  },
+  "author": "Nathan Orsmond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nathan2820/technical-task/issues"
+  },
+  "homepage": "https://github.com/Nathan2820/technical-task#readme"
+}
