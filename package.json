@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Nathan2820/technical-task/issues"
   },
-  "homepage": "https://github.com/Nathan2820/technical-task#readme"
+  "homepage": "https://github.com/Nathan2820/technical-task#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
 }
