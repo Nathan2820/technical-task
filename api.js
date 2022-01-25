@@ -30,15 +30,19 @@ app.post('/order', (req, res) => {
             if(res.statusCode === 200) {
                 res.send("You have successfully created an order. The order id is: " + oid);
             }
-        })
+        });
     connection.end();
-    console.log(order);
 });
 
-app.get(`/order/:oid`, (req, res) => {
-    let oid = req.params.oid;
-    const order = res.body;
-    console.log(order);
+app.get('/order/:id', (req, res) => {
+    const oid = req.params.id;
+    connection.connect();
+        connection.query(`SELECT orderId, orderDate, manufacturer, model, price FROM orders WHERE orderId = ${oid}`, function(err, result) {
+            if(err) throw err;
+            if(res.statusCode === 200) {
+                res.send(result);
+            }
+        });
 }); 
 
 // app.put(`/updateorder/${oid}`, (req, res) => {
