@@ -9,7 +9,7 @@
 
 **Arguments**
 
-- `"order date":date` date of the order.
+- `"orderDate":date` date of the order.
 - `"manufacturer":string` manufacturer of the vehicle.
 - `"model":string` model of the vehicle.
 - `"price":decimal` total price of the vehicle.
@@ -18,13 +18,7 @@
 
 - 201: created successfully
 
-Returns the newly created Order uuid if successful.
-
-```json
-{
-    "uuid": "<identifier>"
-}
-```
+Returns "You have successfully created an order. The order id is: <identifier>" if successful.
 
 ### Update an Order
 **Definition**
@@ -41,17 +35,8 @@ Returns the newly created Order uuid if successful.
 
 - 200: success
 
-Returns the newly update order details if successful.
+Returns "You have successfully updated the order." if successful.
 
-```json
-{
-    "uuid": "<identifier>",
-    "order date": "24/01/2022",
-    "manufacturer": "Vauxhall",
-    "model": "Corsa",
-    "price": "12350.00"
-}
-```
 ### View an Order
 **Definition**
 
@@ -65,9 +50,9 @@ Returns the order details if the order exists and is found.
 
 ```json
 {
-    "uuid": "<identifier>",
-    "order date": "24/01/2022",
+    "orderId": <identifier>,
+    "orderDate": "24/01/2022",
     "manufacturer": "Vauxhall",
     "model": "Corsa",
-    "price": "12350.00"
+    "price": 12350.00
 }

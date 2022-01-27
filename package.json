@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Nathan2820/technical-task#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "docker": "^1.0.0",
     "dotenv": "^14.3.0",
     "express": "^4.17.2",
     "mysql": "^2.18.1"

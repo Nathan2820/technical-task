@@ -22,7 +22,7 @@ app.use(cors());
 
 app.post('/order', (req, res) => {
     const order = req.body;
-    connection.query('INSERT INTO orders (orderDate, manufacturer, model, price) VALUES (?, ?, ?, ?)', [order.date, order.manufacturer, order.model, order.price], function(err, result) {
+    connection.query('INSERT INTO orders (orderDate, manufacturer, model, price) VALUES (?, ?, ?, ?)', [order.orderDate, order.manufacturer, order.model, order.price], function(err, result) {
         if(err) throw err;
         let oid = result.insertId;
         if(res.statusCode === 200) {
@@ -56,5 +56,5 @@ app.put(`/updateorder/:id`, (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log("Technical test app is running");
+    console.log("Technical test app is running on port: " + port);
 });
